@@ -1,0 +1,52 @@
+.ExperienceContainer {
+  width: 86%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 3.5rem;
+}
+
+.ExperienceContent {
+ text-align: center;
+ color: var(--Seconday-color);
+ font-family: var(--Alata-Font);
+}
+
+.ExperienceContent h2 {
+  font-size: 2.5rem;
+  letter-spacing: 1.75px;
+  color: var(--Primary-color);
+  padding-bottom: .4rem;
+}
+
+.ExperienceContent h5 {
+  font-size: 1.4rem;
+}
+
+.ExperienceImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--intrest-bg);
+  border-radius: 50%;
+  padding: 1rem;
+  transition: .3s ease-in-out;
+}
+
+.ExperienceImage:hover {
+  transform: scale(1.3);
+}
+
+.ExperienceImage img {
+  width: 85px;
+}
+
+.ExperienceContainer_Image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}

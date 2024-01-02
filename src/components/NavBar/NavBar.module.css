@@ -1,0 +1,148 @@
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding-block: .8rem;
+  background-color: var(--Black-color2);
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  border-bottom: .5px solid #7042f861;
+}
+
+.navbar_left_link {
+  display: flex;
+  gap: .3rem;
+}
+
+.navbar span {
+  color: var(--green-color);
+}
+
+.navbar_left {
+  padding-left: 8rem;
+}
+
+.navbar_left img {
+  cursor: pointer;
+  width: 1.6rem;
+}
+
+.navbar_left h1 {
+  font-family: var(--Alata-Font);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.navbar_right {
+  padding-right: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+#navbar_right_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   gap: 3.3rem;
+}
+
+#navbar_right_content a li {
+  list-style: none;
+  cursor: pointer; 
+  font-family: var(--Alata-Font);
+  transition: 200ms ease-in-out;
+}
+
+#navbar_right_content a li:hover {
+  transform: scale(1.09);
+} 
+
+#navbar_right_content a :hover::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.hand_burger {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) { 
+  .navbar_left {
+    padding-left: 2rem;
+  }
+
+  .navbar_right {
+    padding-right: 6rem;
+  }  
+}
+
+@media screen and (max-width: 968px) { 
+  .navbar_left {
+    padding-left: .9rem;
+  }
+
+  .navbar_right {
+    padding-right: 6rem;
+    font-size: .9rem;
+  }  
+
+  #navbar_right_content {
+    gap: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #navbar_right_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    position: fixed;
+    top: 58px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #2a3239;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 2rem 0 0 1rem;
+    transition: .3s ease-in-out;
+    font-size: 1.1rem;
+  }
+
+  #navbar_right_content.active {
+    right: 0px;
+    z-index: 2000;
+  }
+
+  .hand_burger {
+    display: block;
+  }
+
+  .hand_burger i {
+    position: absolute;
+    right: 5.5rem;
+    top: 1.1rem;
+    font-size: 1.5rem;
+    cursor: pointer; 
+  }
+  
+  .navbar_left {
+    padding-left: 1rem;
+  }
+
+  .navbar_right {
+    font-size: .8rem;
+    padding-right: 1rem;
+  }  
+}
